@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Retro Website!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000033;
+            color: #00ff00;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+            padding: 20px;
+            border: 3px solid #ff00ff;
+            background: rgba(0, 0, 51, 0.8);
+            box-shadow: 0 0 20px #ff00ff;
+            border-radius: 10px;
+            min-width: 600px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px #ff00ff;
+        }
+        .construction-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .construction-line::before,
+        .construction-line::after {
+            content: "⚡";
+            font-size: 24px;
+            margin: 0 10px;
+            color: #ffff00;
+        }
+        #animatedText {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #00ffff;
+            min-height: 50px;
+        }
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .button-row {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+        .retro-button {
+            background: linear-gradient(to bottom, #4a4a4a, #000000);
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 10px 20px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+        .retro-button:hover {
+            background: linear-gradient(to bottom, #000000, #4a4a4a);
+            color: #ffff00;
+            border-color: #ffff00;
+            text-shadow: 0 0 5px #ffff00;
+            box-shadow: 0 0 15px #ffff00;
+            transform: scale(1.1);
+        }
+        .retro-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="starsCanvas"></div>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <div class="button-row">
+            <button class="retro-button" id="animationBtn">Animation</button>
+            <button class="retro-button" id="downloadBtn">Download</button>
+            <button class="retro-button" id="guestbookBtn">Guest Book</button>
+        </div>
+        <div class="construction-line">UNDER CONSTRUCTION</div>
+        <div id="animatedText">Loading awesome content...</div>
+    </div>
+    <script src="retro-animation.js"></script>
+</body>
+</html> 
